@@ -1,371 +1,101 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>UEM — Cronograma Oficial — Anatomia Humana (Educação Física) — 2025</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UEM — Cronograma e Critérios Anatomia 2025</title>
   <style>
-    :root{
-      --text:#111827;
-      --muted:#6b7280;
-      --line:#111827;
-      --gray:#f3f4f6;
-      --zebra:#f8fafc;
-      --warnbg:#fff7ed;
-      --warnbd:#fed7aa;
-      --evalbg:#fee2e2;
-      --eval:#991b1b;
+    :root {
+      --primary: #111827;
+      --accent: #059669;
+      --bg-eval: #fef2f2;
+      --border: #d1d5db;
     }
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      color:var(--text);
-      background:#fff;
-      line-height:1.35;
-    }
-    .page{
-      max-width: 980px;
-      margin: 26px auto;
-      padding: 0 16px 28px;
-    }
-    header{
-      border: 2px solid var(--line);
-      border-radius: 10px;
-      padding: 18px 18px 12px;
-    }
-    .inst{
-      text-align:center;
-      font-weight:900;
-      letter-spacing:.3px;
-      margin:0 0 6px;
-      text-transform: uppercase;
-      font-size: 14px;
-    }
-    .doc-title{
-      text-align:center;
-      margin:0;
-      font-size: 18px;
-      font-weight: 900;
-    }
-    .doc-sub{
-      text-align:center;
-      margin: 6px 0 0;
-      font-size: 13px;
-      color: var(--muted);
-    }
-    .grid{
-      margin-top: 14px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px 14px;
-      font-size: 13.5px;
-    }
-    .box{
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      padding: 9px 10px;
-      background: #fafafa;
-    }
-    .box b{ font-weight: 800; }
-    .hr{
-      margin: 14px 0 12px;
-      border:0;
-      border-top: 1px solid #d1d5db;
-    }
-    .section-title{
-      font-size: 14px;
-      font-weight: 900;
-      margin: 0 0 8px;
-      text-transform: uppercase;
-      letter-spacing: .3px;
-    }
-    table{
-      width: 100%;
-      border-collapse: collapse;
-      border: 2px solid var(--line);
-      font-size: 13.5px;
-      background:#fff;
-    }
-    th, td{
-      border: 1px solid var(--line);
-      padding: 10px 10px;
-      vertical-align: top;
-      text-align:left;
-    }
-    th{
-      background: var(--gray);
-      font-weight: 900;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: .3px;
-    }
-    tbody tr:nth-child(even) td{ background: var(--zebra); }
-    .col-date{ width: 92px; white-space: nowrap; font-weight: 800; }
-    .col-day{ width: 60px; white-space: nowrap; font-weight: 700; }
-    .eval-row td{
-      background: var(--evalbg) !important;
-      color: var(--eval);
-      font-weight: 800;
-    }
-    .eval-row td .small{
-      display:block;
-      font-weight: 700;
-      color: var(--eval);
-      margin-top: 6px;
-      line-height: 1.25;
-    }
-    .obs{
-      margin-top: 14px;
-      background: var(--warnbg);
-      border: 1px solid var(--warnbd);
-      border-radius: 10px;
-      padding: 12px 12px;
-      font-size: 13px;
-      line-height: 1.45;
-    }
-    .footer{
-      margin-top: 18px;
-      border-top: 1px solid #d1d5db;
-      padding-top: 10px;
-      font-size: 12.5px;
-      color: var(--muted);
-    }
-    .sign{
-      margin-top: 12px;
-      display:flex;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      color: var(--text);
-      font-size: 13px;
-    }
-    .line{
-      display:inline-block;
-      min-width: 320px;
-      border-bottom: 1px solid #111827;
-      transform: translateY(-2px);
-    }
-    @media print{
-      .page{ margin:0; max-width:none; }
-      header{ border-radius: 0; }
-      .obs{ break-inside: avoid; }
-      tr{ break-inside: avoid; }
-    }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.5; color: var(--primary); margin: 0; background: #f9fafb; }
+    .container { max-width: 1000px; margin: 20px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+    header { text-align: center; border-bottom: 2px solid var(--primary); padding-bottom: 20px; margin-bottom: 20px; }
+    h1 { font-size: 1.5rem; text-transform: uppercase; margin: 0; }
+    .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 20px; font-size: 0.9rem; text-align: left; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.85rem; }
+    th, td { border: 1px solid #000; padding: 10px; text-align: left; }
+    th { background: #f3f4f6; font-weight: bold; text-transform: uppercase; }
+    .eval-row { background-color: var(--bg-eval) !important; font-weight: bold; }
+    .criterios { background: #f0fdf4; border: 1px solid var(--accent); padding: 20px; border-radius: 8px; font-size: 0.85rem; }
+    .criterios h2 { margin-top: 0; color: var(--accent); font-size: 1.1rem; border-bottom: 1px solid var(--accent); padding-bottom: 5px; }
+    .footer { margin-top: 30px; font-size: 0.8rem; color: #6b7280; text-align: center; border-top: 1px solid var(--border); padding-top: 10px; }
+    @media print { .container { box-shadow: none; margin: 0; width: 100%; } body { background: white; } }
   </style>
 </head>
-
 <body>
-  <main class="page">
+  <div class="container">
     <header>
-      <p class="inst">Universidade Estadual de Maringá (UEM)</p>
-      <p class="doc-title">Cronograma Oficial de Aulas e Avaliações — 2025</p>
-      <p class="doc-sub">Documento para fins acadêmicos (plano de ensino/registro didático)</p>
-
-      <div class="grid">
-        <div class="box"><b>Curso:</b> Educação Física</div>
-        <div class="box"><b>Disciplina:</b> Anatomia Humana</div>
-        <div class="box"><b>Docente:</b> Profª. Cláudia Pinheiro</div>
-        <div class="box"><b>Dia/Turno:</b> Segunda-feira — Noite</div>
-        <div class="box"><b>Período:</b> 07/04/2025 a 11/08/2025</div>
-        <div class="box"><b>Avaliação:</b> 03 avaliações integradas (prática + teórica) no mesmo dia, com intervalo aproximado de 45 dias</div>
+      <h1>Cronograma Anatomia Aplicada — UEM 2025</h1>
+      <div class="info-grid">
+        <div><strong>Docente:</strong> Profª Cláudia Pinheiro</div>
+        <div><strong>Curso:</strong> Educação Física</div>
+        <div><strong>Período:</strong> 07/04/2025 a 11/08/2025</div>
+        <div><strong>Turma:</strong> 3 (CH: 68.0)</div>
       </div>
-
-      <hr class="hr" />
-
-      <p style="margin:0;font-size:13px;color:var(--muted);">
-        Observação operacional: intervalos institucionais de referência (organização didática) — Manhã 09:30–09:45; Tarde 15:00–15:15.
-      </p>
     </header>
 
-    <div style="height:14px;"></div>
-    <p class="section-title">Cronograma (conteúdo e atividades)</p>
-
-    <table aria-label="Cronograma Oficial UEM">
+    <table>
       <thead>
         <tr>
-          <th class="col-date">Data (2025)</th>
-          <th class="col-day">Dia</th>
-          <th>Conteúdo programático</th>
-          <th>Atividade acadêmica / procedimentos</th>
+          <th>Data</th>
+          <th>Conteúdo Ministrado</th>
+          <th>Atividade / Avaliação</th>
         </tr>
       </thead>
-
       <tbody>
-        <tr>
-          <td class="col-date">07/04</td>
-          <td class="col-day">Seg.</td>
-          <td>Introdução à Anatomia Humana; terminologia básica; relação estrutura–função.</td>
-          <td>Apresentação do componente curricular e discussão dirigida sobre aplicações na Educação Física e prevenção de lesões.</td>
-        </tr>
-
-        <tr>
-          <td class="col-date">14/04</td>
-          <td class="col-day">Seg.</td>
-          <td>Planos anatômicos e eixos do movimento.</td>
-          <td>Atividade prática com massa de modelar para identificação de planos/eixos e compreensão dos movimentos corporais básicos.</td>
-        </tr>
-
-        <tr>
-          <td class="col-date">21/04</td>
-          <td class="col-day">Seg.</td>
-          <td>Sistema esquelético: funções; classificação dos ossos; aspectos aplicados ao movimento humano.</td>
-          <td>Identificação funcional dos ossos envolvidos em gestos motores (corrida, salto, arremesso) e registro orientado.</td>
-        </tr>
-
-        <tr>
-          <td class="col-date">28/04</td>
-          <td class="col-day">Seg.</td>
-          <td>Sistema articular: tipos de articulações; mobilidade e estabilidade; amplitude de movimento.</td>
-          <td>Análise aplicada a exercícios e gestos esportivos; discussão sobre risco de lesões e estratégias preventivas.</td>
-        </tr>
-
-        <tr>
-          <td class="col-date">05/05</td>
-          <td class="col-day">Seg.</td>
-          <td>Sistema muscular: organização; funções; princípios básicos.</td>
-          <td>Mapeamento de grupos musculares em exercícios-base (agachamento, empurrar, puxar) com enfoque funcional.</td>
-        </tr>
-
-        <tr>
-          <td class="col-date">12/05</td>
-          <td class="col-day">Seg.</td>
-          <td>Tipos de contração muscular e produção do movimento.</td>
-          <td>Estudo aplicado: contrações concêntrica, excêntrica e isométrica; implicações para treino, performance e reabilitação.</td>
-        </tr>
-
+        <tr><td>07/04</td><td>Introdução à Anatomia Humana</td><td>Discussão orientada sobre estrutura-função.</td></tr>
+        <tr><td>14/04</td><td>Planos anatômicos e eixos</td><td>Prática com massa de modelar.</td></tr>
+        <tr><td>21/04</td><td>Sistema esquelético</td><td>Identificação funcional dos ossos.</td></tr>
+        <tr><td>28/04</td><td>Sistema articular</td><td>Análise de gestos motores e amplitude.</td></tr>
+        <tr><td>05/05</td><td>Sistema muscular: Introdução</td><td>Identificação dos principais grupos musculares.</td></tr>
+        <tr><td>12/05</td><td>Tipos de contração muscular</td><td>Análise prática de exercícios físicos.</td></tr>
         <tr class="eval-row">
-          <td class="col-date">19/05</td>
-          <td class="col-day">Seg.</td>
-          <td>AVALIAÇÃO 1 (INTEGRADA)</td>
-          <td>
-            Prova prática + prova teórica (mesmo dia).
-            <span class="small">
-              <b>Prática:</b> planos/eixos, ossos e articulações (identificação e função).<br/>
-              <b>Teórica:</b> introdução; sistema esquelético e articular.
-            </span>
-          </td>
+          <td>19/05</td>
+          <td>1ª AVALIAÇÃO PERIÓDICA</td>
+          <td>Prática: Ossos/Artic. | Teórica: Intro/Esq/Art.</td>
         </tr>
-
-        <tr>
-          <td class="col-date">26/05</td>
-          <td class="col-day">Seg.</td>
-          <td>Músculos dos membros superiores: noções essenciais e aplicação ao movimento.</td>
-          <td>Estudo funcional em movimentos de empurrar, puxar e arremessar; prevenção de lesões (ombro/cotovelo).</td>
-        </tr>
-
-        <tr>
-          <td class="col-date">02/06</td>
-          <td class="col-day">Seg.</td>
-          <td>Músculos dos membros inferiores: noções essenciais e aplicação ao movimento.</td>
-          <td>Análise funcional aplicada à locomoção e ao salto; prevenção de lesões (joelho/tornozelo).</td>
-        </tr>
-
-        <tr>
-          <td class="col-date">09/06</td>
-          <td class="col-day">Seg.</td>
-          <td>Cadeias musculares e integração músculo–articulação.</td>
-          <td>Movimentos complexos; padrões compensatórios; orientações para prevenção de lesões em exercício físico.</td>
-        </tr>
-
-        <tr>
-          <td class="col-date">16/06</td>
-          <td class="col-day">Seg.</td>
-          <td>Sistema nervoso: introdução e controle do movimento.</td>
-          <td>Discussão aplicada: recrutamento motor, controle neural do movimento e adaptação ao treinamento.</td>
-        </tr>
-
-        <tr>
-          <td class="col-date">23/06</td>
-          <td class="col-day">Seg.</td>
-          <td>Medula espinal e reflexos: princípios e aplicações.</td>
-          <td>Análise de postura, reflexos e resposta motora; exemplos aplicados ao treino e desempenho.</td>
-        </tr>
-
+        <tr><td>26/05</td><td>Membros superiores</td><td>Estudo funcional aplicado aos esportes.</td></tr>
+        <tr><td>02/06</td><td>Membros inferiores</td><td>Análise funcional de locomoção e salto.</td></tr>
+        <tr><td>09/06</td><td>Cadeias musculares</td><td>Movimentos complexos e prevenção de lesões.</td></tr>
+        <tr><td>16/06</td><td>Sistema nervoso: Introdução</td><td>Discussão sobre controle neural.</td></tr>
+        <tr><td>23/06</td><td>Medula espinal e reflexos</td><td>Análise da postura e reflexos motores.</td></tr>
         <tr class="eval-row">
-          <td class="col-date">30/06</td>
-          <td class="col-day">Seg.</td>
-          <td>AVALIAÇÃO 2 (INTEGRADA)</td>
-          <td>
-            Prova prática + prova teórica (mesmo dia).
-            <span class="small">
-              <b>Prática:</b> musculatura (MMSS/MMII) e cadeias musculares (identificação e função).<br/>
-              <b>Teórica:</b> sistema muscular; contrações; aplicações ao exercício.
-            </span>
-          </td>
+          <td>30/06</td>
+          <td>2ª AVALIAÇÃO PERIÓDICA</td>
+          <td>Prática: Musculatura | Teórica: Sist. Muscular.</td>
         </tr>
-
-        <tr>
-          <td class="col-date">07/07</td>
-          <td class="col-day">Seg.</td>
-          <td>Encéfalo e controle motor (ênfase em cerebelo).</td>
-          <td>Relação com coordenação, equilíbrio e aprendizagem motora; aplicações à performance esportiva.</td>
-        </tr>
-
-        <tr>
-          <td class="col-date">14/07</td>
-          <td class="col-day">Seg.</td>
-          <td>Sistema nervoso periférico e propriocepção.</td>
-          <td>Aplicações à aprendizagem motora; implicações para treino e prevenção de quedas/lesões.</td>
-        </tr>
-
-        <tr>
-          <td class="col-date">21/07</td>
-          <td class="col-day">Seg.</td>
-          <td>Sistema cardiovascular: noções essenciais para exercício físico.</td>
-          <td>Resposta cardiovascular ao exercício; noções de adaptação; relação com intensidade e recuperação.</td>
-        </tr>
-
-        <tr>
-          <td class="col-date">28/07</td>
-          <td class="col-day">Seg.</td>
-          <td>Sistema respiratório: noções essenciais para exercício físico.</td>
-          <td>Ventilação e desempenho; relação com intensidade; sinais de fadiga e estratégias de recuperação.</td>
-        </tr>
-
-        <!-- ✅ AQUI entram os sistemas digestório, urinário e genital (sem estourar o semestre) -->
-        <tr>
-          <td class="col-date">04/08</td>
-          <td class="col-day">Seg.</td>
-          <td>Sistemas digestório, urinário e genital: abordagem anatômica e integração funcional.</td>
-          <td>
-            Enfoque aplicado à Educação Física: metabolismo energético (digestório), equilíbrio hídrico/hidroeletrolítico e recuperação (urinário),
-            bases hormonais e diferenças sexuais no ciclo de vida (genital). Discussão orientada e estudo dirigido.
-          </td>
-        </tr>
-
+        <tr><td>07/07</td><td>Encéfalo e controle motor</td><td>Coordenação, equilíbrio e prática esportiva.</td></tr>
+        <tr><td>14/07</td><td>Propriocepção</td><td>Discussão sobre aprendizagem motora.</td></tr>
+        <tr><td>21/07</td><td>Sistema cardiovascular</td><td>Resposta cardiovascular ao exercício.</td></tr>
+        <tr><td>28/07</td><td>Sistema respiratório</td><td>Ventilação pulmonar e desempenho físico.</td></tr>
+        <tr><td>04/08</td><td>Integração cardiorrespiratória</td><td>Respostas fisiológicas ao esforço.</td></tr>
         <tr class="eval-row">
-          <td class="col-date">11/08</td>
-          <td class="col-day">Seg.</td>
-          <td>AVALIAÇÃO 3 (FINAL — INTEGRADA)</td>
-          <td>
-            Prova prática + prova teórica (mesmo dia).
-            <span class="small">
-              <b>Prática:</b> controle motor e integração sistêmica (situações aplicadas).<br/>
-              <b>Teórica:</b> sistemas nervoso, cardiovascular e respiratório <b>+ digestório, urinário e genital</b>; integração no exercício.
-            </span>
-          </td>
+          <td>11/08</td>
+          <td>3ª AVALIAÇÃO PERIÓDICA (FINAL)</td>
+          <td>Prática: Integração | Teórica: Nervoso/Cardio/Resp.</td>
         </tr>
       </tbody>
     </table>
 
-    <div class="obs">
-      <b>Observações acadêmicas:</b>
-      (i) As datas poderão ser ajustadas conforme calendário letivo institucional.
-      (ii) A frequência mínima exigida é de 75% das atividades.
-      (iii) Média para aprovação: 6,0 (seis). Alunos com 4,0 a 5,9 terão direito a exame final, conforme normativas vigentes.<br/><br/>
-      <b>Nota metodológica:</b> Os sistemas digestório, urinário e genital são abordados de forma integrada, com enfoque funcional e aplicado à Educação Física,
-      considerando metabolismo energético, equilíbrio hidroeletrolítico, regulação hormonal e implicações para o exercício físico e a saúde.
+    <div class="criterios">
+      <h2>6. Critério de Avaliação da Aprendizagem</h2>
+      <p>A avaliação será composta por Provas Periódicas (Peso 1.0 cada) divididas em:</p>
+      <ul>
+        <li><strong>Seminário teórico prático em grupo:</strong> Valor de 0,0 a 2,0.</li>
+        <li><strong>Prova prática:</strong> Valor de 0,0 a 3,0.</li>
+        <li><strong>Prova teórica:</strong> Valor de 0,0 a 5,0.</li>
+      </ul>
+      <p><em>*A nota do seminário inclui autoavaliação (0,0 a 1,0), avaliação por pares (0,0 a 1,0) e nota do professor (0,0 a 1,0).</em></p>
+      <p><strong>Exame Final:</strong> Abrangerá todo o programa (Teórica: 7,0 | Prática: 3,0).</p>
     </div>
 
     <div class="footer">
-      <div class="sign">
-        <div>Maringá, ____/____/2025</div>
-        <div>Assinatura: <span class="line">&nbsp;</span></div>
-      </div>
-      <div style="margin-top:8px;">Documento gerado para fins acadêmicos • UEM • 2025</div>
+      Documento gerado para Registro Didático - Universidade Estadual de Maringá (UEM)
     </div>
-  </main>
+  </div>
 </body>
 </html>
-```0
