@@ -6,44 +6,191 @@
   <title>UEM — Cronograma e Critérios Anatomia 2025</title>
   <style>
     :root {
-      --primary: #111827;
-      --accent: #059669;
-      --bg-eval: #fef2f2;
-      --border: #d1d5db;
+      --primary: #064e3b; /* Verde escuro institucional */
+      --secondary: #f9fafb;
+      --accent: #10b981;
+      --text-main: #1f2937;
+      --text-light: #6b7280;
+      --bg-eval: #fff1f2;
+      --border-color: #e5e7eb;
     }
-    body { font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.5; color: var(--primary); margin: 0; background: #f9fafb; }
-    .container { max-width: 1000px; margin: 20px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
-    header { text-align: center; border-bottom: 2px solid var(--primary); padding-bottom: 20px; margin-bottom: 20px; }
-    h1 { font-size: 1.5rem; text-transform: uppercase; margin: 0; }
-    .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 20px; font-size: 0.9rem; text-align: left; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.85rem; }
-    th, td { border: 1px solid #000; padding: 10px; text-align: left; }
-    th { background: #f3f4f6; font-weight: bold; text-transform: uppercase; }
-    .eval-row { background-color: var(--bg-eval) !important; font-weight: bold; }
-    .criterios { background: #f0fdf4; border: 1px solid var(--accent); padding: 20px; border-radius: 8px; font-size: 0.85rem; }
-    .criterios h2 { margin-top: 0; color: var(--accent); font-size: 1.1rem; border-bottom: 1px solid var(--accent); padding-bottom: 5px; }
-    .footer { margin-top: 30px; font-size: 0.8rem; color: #6b7280; text-align: center; border-top: 1px solid var(--border); padding-top: 10px; }
-    @media print { .container { box-shadow: none; margin: 0; width: 100%; } body { background: white; } }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--text-main);
+      margin: 0;
+      background: #f3f4f6;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
+      background: white;
+      padding: 50px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      border-top: 8px solid var(--primary);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .uem-logo {
+      font-weight: 800;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin: 0;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+      padding: 20px;
+      background: var(--secondary);
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    .info-item b {
+      color: var(--primary);
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .info-item span {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 30px 0;
+    }
+
+    th {
+      background: var(--primary);
+      color: white;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      padding: 15px;
+      text-align: left;
+    }
+
+    td {
+      padding: 15px;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.9rem;
+    }
+
+    tr:hover td {
+      background-color: #fefefe;
+    }
+
+    .eval-row {
+      background-color: var(--bg-eval);
+      font-weight: 700;
+      color: #991b1b;
+    }
+
+    .eval-row td {
+      border-bottom: 1px solid #fecaca;
+    }
+
+    .criterios {
+      margin-top: 40px;
+      padding: 30px;
+      border-left: 5px solid var(--accent);
+      background: #f0fdf4;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .criterios h2 {
+      margin-top: 0;
+      color: var(--primary);
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .criterios ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+
+    .criterios li {
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    @media print {
+      body { background: white; padding: 0; }
+      .container { box-shadow: none; border: none; padding: 20px; }
+      .criterios { border: 1px solid #eee; background: white; }
+    }
   </style>
 </head>
 <body>
+
   <div class="container">
     <header>
-      <h1>Cronograma Anatomia Aplicada — UEM 2025</h1>
+      <span class="uem-logo">Universidade Estadual de Maringá</span>
+      <h1>Cronograma de Anatomia Aplicada — 2025</h1>
+      
       <div class="info-grid">
-        <div><strong>Docente:</strong> Profª Cláudia Pinheiro</div>
-        <div><strong>Curso:</strong> Educação Física</div>
-        <div><strong>Período:</strong> 07/04/2025 a 11/08/2025</div>
-        <div><strong>Turma:</strong> 3 (CH: 68.0)</div>
+        <div class="info-item">
+          <b>Docente Responsável</b>
+          <span>Profª Cláudia Pinheiro</span>
+        </div>
+        <div class="info-item">
+          <b>Curso Acadêmico</b>
+          <span>Bacharelado em Educação Física</span>
+        </div>
+        <div class="info-item">
+          <b>Vigência do Período</b>
+          <span>07/04/2025 a 11/08/2025</span>
+        </div>
+        <div class="info-item">
+          <b>Identificação</b>
+          <span>Turma 3 (68.0 Horas)</span>
+        </div>
       </div>
     </header>
 
     <table>
       <thead>
         <tr>
-          <th>Data</th>
-          <th>Conteúdo Ministrado</th>
-          <th>Atividade / Avaliação</th>
+          <th style="width: 15%;">Data</th>
+          <th style="width: 45%;">Conteúdo Programático</th>
+          <th style="width: 40%;">Atividade / Avaliação</th>
         </tr>
       </thead>
       <tbody>
@@ -83,19 +230,21 @@
 
     <div class="criterios">
       <h2>6. Critério de Avaliação da Aprendizagem</h2>
-      <p>A avaliação será composta por Provas Periódicas (Peso 1.0 cada) divididas em:</p>
+      <p>O rendimento acadêmico é composto por Provas Periódicas (Peso 1.0 cada), distribuídas da seguinte forma:</p>
       <ul>
-        <li><strong>Seminário teórico prático em grupo:</strong> Valor de 0,0 a 2,0.</li>
-        <li><strong>Prova prática:</strong> Valor de 0,0 a 3,0.</li>
-        <li><strong>Prova teórica:</strong> Valor de 0,0 a 5,0.</li>
+        <li><strong>Seminário Teórico-Prático:</strong> 0,0 a 2,0 pontos (Inclui autoavaliação e pares).</li>
+        <li><strong>Avaliação de Desempenho Prático:</strong> 0,0 a 3,0 pontos.</li>
+        <li><strong>Avaliação de Conhecimento Teórico:</strong> 0,0 a 5,0 pontos.</li>
       </ul>
-      <p><em>*A nota do seminário inclui autoavaliação (0,0 a 1,0), avaliação por pares (0,0 a 1,0) e nota do professor (0,0 a 1,0).</em></p>
-      <p><strong>Exame Final:</strong> Abrangerá todo o programa (Teórica: 7,0 | Prática: 3,0).</p>
+      <p><small><em>Nota: Estudantes ausentes em seminários devem apresentar justificativa legal para readequação de pesos (Teórica 6,0 / Prática 4,0).</em></small></p>
+      <p><strong>Exame Final:</strong> Avaliação integral do programa (Teórica 7,0 / Prática 3,0).</p>
     </div>
 
     <div class="footer">
-      Documento gerado para Registro Didático - Universidade Estadual de Maringá (UEM)
+      Secretaria Acadêmica Virtual — Versão 2.0.20251217<br>
+      <strong>Universidade Estadual de Maringá (UEM)</strong>
     </div>
   </div>
+
 </body>
 </html>
